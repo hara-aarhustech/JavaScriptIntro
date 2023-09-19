@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"
+    />
+    <link rel="stylesheet" href="styles/base.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="scripts/klipse.config.js"></script>
+    <script src="scripts/main.js"></script>
+
+    <title>Introduktion</title>
+  </head>
+  <body>
+    <div id="header" class="topbar hide-large text-large blue-grey">
+      <div style="padding-top: 10px">
+        <a
+          href="javascript:void(0)"
+          class="a-button"
+          style="width: auto"
+          onclick="openSideBar()"
+          >☰ Introduktion til JavaScript</a
+        >
+      </div>
+    </div>
+    <div id="sidenav" class="sidebar hide-small text-large blue-grey">
+      <div class="hide-large">
+        <a
+          href="javascript:void(0)"
+          class="a-button"
+          style="text-align: center; padding: 20px 0px"
+          onclick="closeSideBar()"
+          >X</a
+        >
+      </div>
+      <div>
+        <h3 style="width: 100%; text-align: center">
+          Introduktion til Javascript
+        </h3>
+      </div>
+      <div style="height: 100%; overflow-y: scroll">
+        <a href="index01.html" class="a-button" onclick="closeSideBar()"
+          >01_Introduktion</a
+        >
+        <a href="index02.html" class="a-button" onclick="closeSideBar()"
+          >02_JavaScript</a
+        >
+        <a href="index03.html" class="a-button" onclick="closeSideBar()"
+          >03_Variables</a
+        >
+        <a href="index04.html" class="a-button" onclick="closeSideBar()"
+          >04_DataTyper</a
+        >
+        <a href="index05.html" class="a-button" onclick="closeSideBar()"
+          >05_ControlFlow</a
+        >
+        <a href="index06.html" class="a-button" onclick="closeSideBar()"
+          >06_Loops</a
+        >
+        <a href="index07.html" class="a-button" onclick="closeSideBar()"
+          >07_Functions</a
+        >
+        <a href="index08.html" class="a-button" onclick="closeSideBar()"
+          >08_Scope</a
+        >
+        <a href="index09.html" class="a-button" onclick="closeSideBar()"
+          >09_Object</a
+        >
+        <a href="index10.html" class="a-button" onclick="closeSideBar()"
+          >10_Arrays</a
+        >
+        <!-- <a href="#" class="a-button" onclick="closeSideBar()"></a> -->
+      </div>
+    </div>
+
+    <div id="overlay" class="overlay" onclick="closeSideBar()"></div>
+
+    <div class="content">
+      <div id="content" style="padding: 5px 50px"></div>
+    </div>
+
+    <script>
+      function openSideBar() {
+        document.getElementById("sidenav").style.display = "block";
+        document.getElementById("overlay").style.display = "block";
+      }
+
+      function closeSideBar() {
+        document.getElementById("sidenav").style.display = "none";
+        document.getElementById("overlay").style.display = "none";
+      }
+
+      loadMarkdown("pages/07_functions.md", "content");
+    </script>
+  </body>
+</html>
